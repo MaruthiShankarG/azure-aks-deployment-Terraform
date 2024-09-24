@@ -8,3 +8,4 @@ aks_agent_count     = 1
 aks_vm_size         = "Standard_DS2_v2"
 nsg_name            = "dev-nsg"
 log_analytics_workspace_id = "your_workspace_id"  # Ensure this variable is defined in variables.tf
+user_object_id = "your-user-object-id"

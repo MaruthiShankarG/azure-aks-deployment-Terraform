@@ -47,3 +47,8 @@ variable "log_analytics_workspace_id" {
   description = "The ID of the log analytics workspace"
   type        = string
 }
+
+variable "user_object_id" {
+  description = "The Object ID of the user to assign the role to"
+  type        = string
+}

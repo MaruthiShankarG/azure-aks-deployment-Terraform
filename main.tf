@@ -24,6 +24,7 @@ module "aks_cluster" {
   dns_prefix          = var.aks_dns_prefix
   agent_count         = var.aks_agent_count
   vm_size             = var.aks_vm_size
+  user_object_id      = var.user_object_id  # Add this line
 }
 
 module "network_security_group" {
