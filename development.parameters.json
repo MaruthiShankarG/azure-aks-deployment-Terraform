@@ -1,0 +1,13 @@
+{
+    "rg_name": "dev-rg",
+    "location": "East US",
+    "vnet_name": "dev-vnet",
+    "vnet_address_space": ["10.0.0.0/16"],
+    "aks_name": "dev-aks",
+    "aks_dns_prefix": "devaks",
+    "aks_agent_count": 1,
+    "aks_vm_size": "Standard_DS2_v2",
+    "nsg_name": "dev-nsg",
+    "log_analytics_workspace_id": "your_workspace_id"
+  }
+  
