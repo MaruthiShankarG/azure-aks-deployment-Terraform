@@ -1,13 +1,10 @@
-{
-    "rg_name": "staging-rg",
-    "location": "East US",
-    "vnet_name": "staging-vnet",
-    "vnet_address_space": ["10.1.0.0/16"],
-    "aks_name": "staging-aks",
-    "aks_dns_prefix": "stagingaks",
-    "aks_agent_count": 2,
-    "aks_vm_size": "Standard_DS2_v2",
-    "nsg_name": "staging-nsg",
-    "log_analytics_workspace_id": "your_workspace_id"
-  }
-  
+rg_name             = "staging-rg"
+location            = "East US"
+vnet_name           = "staging-vnet"
+vnet_address_space  = ["10.1.0.0/16"]
+aks_name            = "staging-aks"
+aks_dns_prefix      = "stagingaks"
+aks_agent_count     = 2
+aks_vm_size         = "Standard_DS2_v2"
+nsg_name            = "staging-nsg"
+log_analytics_workspace_id = "your_workspace_id"  # Ensure this variable is defined in variables.tf
