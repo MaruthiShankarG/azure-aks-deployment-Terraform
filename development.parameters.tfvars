@@ -7,5 +7,5 @@ aks_dns_prefix      = "devaks"
 aks_agent_count     = 1
 aks_vm_size         = "Standard_DS2_v2"
 nsg_name            = "dev-nsg"
-log_analytics_workspace_id = "your_workspace_id"  # Ensure this variable is defined in variables.tf
+log_analytics_workspace_id = "/subscriptions/12345678-1234-9876-4563-123456789012/resourceGroups/myResourceGroup/providers/Microsoft.OperationalInsights/workspaces/myWorkspace"
 user_object_id = "your-user-object-id"
