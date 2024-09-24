@@ -1,13 +1,13 @@
 resource "azurerm_kubernetes_cluster" "this" {
-  name                = var.name
+  name                = var.aks_name
   location            = var.location
-  resource_group_name = var.resource_group_name
-  dns_prefix          = var.dns_prefix
+  resource_group_name = var.rg_name
+  dns_prefix          = var.aks_dns_prefix
 
   agent_pool_profile {
     name   = "default"
-    count  = var.agent_count
-    vm_size = var.vm_size
+    count  = var.aks_agent_count
+    vm_size = var.aks_vm_size
     os_type = "Linux"
   }
 
