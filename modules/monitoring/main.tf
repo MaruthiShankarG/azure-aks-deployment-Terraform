@@ -1,17 +1,23 @@
 resource "azurerm_monitor_diagnostic_setting" "this" {
-  name               = var.name
+  name               = "example-diagnostic-setting"
   target_resource_id = var.target_resource_id
-
-  log_analytics_destination_type = "Dedicated"
-  workspace_id                   = var.workspace_id
 
   log {
     category = "kube-apiserver"
-    enabled  = true
+    retention_policy {
+      enabled = false
+      days    = 0
+    }
   }
 
   metric {
     category = "AllMetrics"
-    enabled  = true
+    retention_policy {
+      enabled = false
+      days    = 0
+    }
   }
+
+  # Assuming you're sending diagnostics to a Log Analytics Workspace
+  log_analytics_workspace_id = var.workspace_id
 }

@@ -27,3 +27,9 @@ variable "vm_size" {
   description = "VM size for the AKS agents"
   type        = string
 }
+
+variable "user_object_id" {
+  description = "The Object ID of the user to assign the role to"
+  type        = string
+}
+
