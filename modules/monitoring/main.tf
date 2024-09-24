@@ -5,12 +5,10 @@ resource "azurerm_monitor_diagnostic_setting" "this" {
   log_analytics_workspace_id = var.workspace_id
 
   log {
-    category = "kube-apiserver"
+  category = "kube-apiserver"  # Change to appropriate category
     enabled  = true
-    retention_policy {
-      enabled = false  # Use this if you need to set a retention policy
-    }
   }
+  
 
   metric {
     category = "AllMetrics"  # Example metrics category
