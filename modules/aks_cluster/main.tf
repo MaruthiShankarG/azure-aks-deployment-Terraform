@@ -4,12 +4,12 @@ resource "azurerm_kubernetes_cluster" "this" {
   resource_group_name = var.resource_group_name
   dns_prefix          = var.dns_prefix
 
-  agent_pool_profile {
-    name   = "default"
-    count  = var.agent_count
-    vm_size = var.vm_size
-    os_type = "Linux"
+ default_node_pool {
+    name       = "default"
+    node_count = var.agent_count
+    vm_size    = var.vm_size
   }
+  
 
   identity { type = "SystemAssigned" }
 }
