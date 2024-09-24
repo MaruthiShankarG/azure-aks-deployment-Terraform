@@ -1,10 +1,10 @@
 resource "azurerm_monitor_diagnostic_setting" "this" {
- 
+  name               = "aks-monitoring-diagnostic"  # Add a name here
   target_resource_id = var.target_resource_id
 
   log_analytics_workspace_id = var.workspace_id
 
-  logs {
+  log {
     category = "kube-apiserver"  # Example log category
     retention_policy {
       enabled = false
@@ -12,7 +12,7 @@ resource "azurerm_monitor_diagnostic_setting" "this" {
     }
   }
 
-  metrics {
+  metric {
     category = "AllMetrics"  # Example metrics category
     retention_policy {
       enabled = false
