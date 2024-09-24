@@ -1,5 +1,5 @@
 resource "azurerm_monitor_diagnostic_setting" "this" {
-  name               = "example-diagnostic-setting"
+ 
   target_resource_id = var.target_resource_id
 
   log_analytics_workspace_id = var.workspace_id

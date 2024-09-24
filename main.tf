@@ -36,7 +36,7 @@ module "network_security_group" {
 
 module "monitoring" {
   source              = "./modules/monitoring"
-  name                = "aks-monitoring"
+ 
   target_resource_id  = module.aks_cluster.id
   workspace_id        = var.log_analytics_workspace_id
 }
